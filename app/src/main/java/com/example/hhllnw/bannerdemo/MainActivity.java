@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         bannerParams.setDotSelectColorId(R.color.dot_selected);//点选中颜色
         bannerParams.setDotUnSelectColorId(R.color.dot_unSelect);//未选中颜色
         bannerParams.setRadius(10);//点半径
-        bannerParams.setInterval(1);
+        bannerParams.setInterval(5);//时间间隔
         bannerParams.setListener(new BannerView.OnBannerItemClickListener() {
             @Override
             public void onBannerClick(int index, BannerEntity banner) {
