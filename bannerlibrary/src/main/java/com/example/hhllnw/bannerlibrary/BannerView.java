@@ -70,7 +70,7 @@ public class BannerView extends RelativeLayout implements ViewPager.OnPageChange
         if (bannerParams.getPaths() == null || bannerParams.getPaths() == null) {
             return;
         }
-        if (!(this.getParent() instanceof android.widget.LinearLayout)) {
+        if (!(this.getParent() instanceof LinearLayout)) {
             Log.e("err", "BannerView parent must LinearLayout");
             return;
         }

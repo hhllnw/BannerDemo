@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         banners.add(new BannerEntity("http://tupian.enterdesk.com/2013/mxy/12/16/4/6.jpg"));
 
         BannerParams bannerParams = new BannerParams();
-        bannerParams.setPaths(banners);//图片地址结合
+        bannerParams.setPaths(banners);//图片地址集合
         bannerParams.setFrom(BannerView.FROM_NET);//图片类型（本地,网络）
         bannerParams.setPart(2);//Banner高度，2 表示屏幕高度 1/2
         bannerParams.setDotSelectColorId(R.color.dot_selected);//点选中颜色
