@@ -8,7 +8,7 @@ import java.util.List;
  */
 
 public class BannerParams {
-    private List<BannerEntity> paths;
+    private List<? extends BannerEntity> paths;
     private BannerView.OnBannerItemClickListener listener;
     private int from;
     private int part = 1;
@@ -17,11 +17,11 @@ public class BannerParams {
     private int radius = 10;
     private int interval = 5;//时间间隔,单位s
 
-    public List<BannerEntity> getPaths() {
+    public List<? extends BannerEntity> getPaths() {
         return paths;
     }
 
-    public void setPaths(List<BannerEntity> paths) {
+    public void setPaths(List<? extends BannerEntity> paths) {
         this.paths = paths;
     }
 

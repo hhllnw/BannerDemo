@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     private BannerView mBannerView;
-    private ArrayList<BannerEntity> banners;
+    private ArrayList<MyBannerEntity> banners;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,9 +22,9 @@ public class MainActivity extends AppCompatActivity {
         mBannerView = (BannerView) findViewById(R.id.mBannerView);
 
         banners = new ArrayList<>();
-        banners.add(new BannerEntity("http://pic24.nipic.com/20121023/5692504_113455637193_2.jpg"));
-        banners.add(new BannerEntity("http://pic63.nipic.com/file/20150328/9448607_153955535000_2.jpg"));
-        banners.add(new BannerEntity("http://tupian.enterdesk.com/2013/mxy/12/16/4/6.jpg"));
+        banners.add(new MyBannerEntity("http://pic24.nipic.com/20121023/5692504_113455637193_2.jpg"));
+        banners.add(new MyBannerEntity("http://pic63.nipic.com/file/20150328/9448607_153955535000_2.jpg"));
+        banners.add(new MyBannerEntity("http://tupian.enterdesk.com/2013/mxy/12/16/4/6.jpg"));
 
         BannerParams bannerParams = new BannerParams();
         bannerParams.setPaths(banners);//图片地址集合
