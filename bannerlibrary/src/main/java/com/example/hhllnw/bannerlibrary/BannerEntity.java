@@ -12,11 +12,11 @@ public class BannerEntity {
 
     }
 
-    public BannerEntity(int resId) {
+    public void setResId(int resId) {
         this.resId = resId;
     }
 
-    public BannerEntity(String path) {
+    public void setPath(String path) {
         this.path = path;
     }
 
@@ -27,4 +27,6 @@ public class BannerEntity {
     public int getResId() {
         return resId;
     }
+
+
 }
