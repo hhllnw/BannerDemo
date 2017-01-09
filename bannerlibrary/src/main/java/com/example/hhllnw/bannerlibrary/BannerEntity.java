@@ -8,6 +8,10 @@ public class BannerEntity {
     private int resId;
     private String path;
 
+    public BannerEntity() {
+
+    }
+
     public BannerEntity(int resId) {
         this.resId = resId;
     }
