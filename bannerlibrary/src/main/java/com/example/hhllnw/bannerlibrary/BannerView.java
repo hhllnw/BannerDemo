@@ -155,22 +155,21 @@ public class BannerView extends RelativeLayout implements ViewPager.OnPageChange
         @Override
         public Object instantiateItem(ViewGroup container, int position) {
             final int index = position % bannerParams.getPaths().size();
-            final BannerEntity pathEntity = bannerParams.getPaths().get(index);
             final ImageView imageView = new ImageView(getContext());
             ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(
                     ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
             //加载图片
             if (bannerParams.getFrom() == FROM_LOCAL) {
-                Glide.with(mContext).load(pathEntity.getResId()).into(imageView);
+                Glide.with(mContext).load(bannerParams.getPaths().get(index).getResId()).into(imageView);
             } else if (bannerParams.getFrom() == FROM_NET) {
-                Glide.with(mContext).load(pathEntity.getPath()).into(imageView);
+                Glide.with(mContext).load(bannerParams.getPaths().get(index).getPath()).into(imageView);
             }
             imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
             imageView.setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     if (bannerParams.getListener() != null) {
-                        bannerParams.getListener().onBannerClick(index, pathEntity);
+                        bannerParams.getListener().onBannerClick(index, bannerParams.getPaths().get(index));
                     }
                 }
             });
@@ -189,9 +188,9 @@ public class BannerView extends RelativeLayout implements ViewPager.OnPageChange
          * item单击事件
          *
          * @param index  位置
-         * @param banner BannerEntity实体
+         * @param object BannerEntity实体
          */
-        void onBannerClick(int index, BannerEntity banner);
+        void onBannerClick(int index, Object object);
     }
 
 
