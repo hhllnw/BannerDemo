@@ -8,11 +8,5 @@ import com.example.hhllnw.bannerlibrary.BannerEntity;
 
 public class MyBannerEntity extends BannerEntity{
 
-    public MyBannerEntity(int resId) {
-        super(resId);
-    }
 
-    public MyBannerEntity(String path) {
-        super(path);
-    }
 }
