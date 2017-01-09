@@ -22,9 +22,12 @@ public class MainActivity extends AppCompatActivity {
         mBannerView = (BannerView) findViewById(R.id.mBannerView);
 
         banners = new ArrayList<>();
-        banners.add(new MyBannerEntity("http://pic24.nipic.com/20121023/5692504_113455637193_2.jpg"));
-        banners.add(new MyBannerEntity("http://pic63.nipic.com/file/20150328/9448607_153955535000_2.jpg"));
-        banners.add(new MyBannerEntity("http://tupian.enterdesk.com/2013/mxy/12/16/4/6.jpg"));
+        //banners.add(new MyBannerEntity("http://pic24.nipic.com/20121023/5692504_113455637193_2.jpg"));
+        //banners.add(new MyBannerEntity("http://pic63.nipic.com/file/20150328/9448607_153955535000_2.jpg"));
+        //banners.add(new MyBannerEntity("http://tupian.enterdesk.com/2013/mxy/12/16/4/6.jpg"));
+        MyBannerEntity entity = new MyBannerEntity();
+        entity.setPath("http://pic24.nipic.com/20121023/5692504_113455637193_2.jpg");
+        banners.add(entity);
 
         BannerParams bannerParams = new BannerParams();
         bannerParams.setPaths(banners);//图片地址集合
@@ -36,7 +39,8 @@ public class MainActivity extends AppCompatActivity {
         bannerParams.setInterval(5);//时间间隔
         bannerParams.setListener(new BannerView.OnBannerItemClickListener() {
             @Override
-            public void onBannerClick(int index, BannerEntity banner) {
+            public void onBannerClick(int index, Object banner) {
+
                 //item单击事件
             }
         });
